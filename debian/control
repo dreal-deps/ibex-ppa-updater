@@ -1,0 +1,11 @@
+Source: libibex-dev
+Section: devel
+Priority: optional
+Maintainer: Soonho Kong <soonho.kong@gmail.com>
+Build-Depends: bison, flex, pkg-config, build-essential, python, coinor-libclp-dev, zlib1g-dev, libbz2-dev
+Homepage: https://github.com/ibex-team/ibex-lib
+
+Package: libibex-dev
+Architecture: any
+Depends: coinor-libclp-dev, zlib1g-dev, libbz2-dev
+Description: C++ library for constraint processing over real numbers

@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+# secondly called by launchpad
+build:
+	./waf configure --enable-shared --with-optim --with-affine --interval-lib=filib --prefix=debian/tmp/usr
+	./waf build
+
+# thirdly called by launchpad
+binary: binary-indep binary-arch
+
+binary-indep:
+	# nothing to be done
+
+binary-arch:
+	./waf install
+	mkdir debian/tmp/DEBIAN
+	sed 's/^prefix=.*/prefix=\/usr/' -i debian/tmp/usr/share/pkgconfig/ibex.pc  # fix prefix
+	dpkg-gencontrol -plibibex-dev
+	dpkg --build debian/tmp ..
+
+# firstly called by launchpad
+clean:
+	-rm -rf build
+	-rm -rf $(BUILDDIR)
+
+.PHONY: binary binary-arch binary-indep clean

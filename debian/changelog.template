@@ -1,0 +1,5 @@
+##PKG_NAME## (##VERSION##) ##DIST##; urgency=##URGENCY##
+
+  * ##COMMIT_MESSAGE##
+
+ -- ##AUTHOR_NAME## <##AUTHOR_EMAIL##>  ##DATE_STRING##
