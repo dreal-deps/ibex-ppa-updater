@@ -1,9 +1,7 @@
-This script creates Ubuntu packages for [ibex-lib][ibex-lib] and uploads them to
+This script creates an Ubuntu package for [ibex-lib][ibex-lib] and uploads it to
 [launchpad.net](https://launchpad.net/~dreal/+archive/ubuntu/dreal/+packages).
 
-Uploaded packages are available at
-
-https://launchpad.net/~dreal/+archive/ubuntu/dreal/+packages
+Uploaded packages are available at https://launchpad.net/~dreal/+archive/ubuntu/dreal/+packages.
 
 [ibex-lib]: https://http://ibex-lib.org/
 
@@ -59,7 +57,7 @@ fi
 
 To set up pbuilder, run:
 
-```
+```bash
 sudo pbuilder --create                \
               --distribution trusty   \
               --architecture amd64    \
@@ -68,7 +66,7 @@ sudo pbuilder --create                \
 ```
 
 To create a package, run:
-```
+```bash
 sudo pbuilder --build
               --distribution trusty
               --architecture amd64
