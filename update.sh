@@ -7,7 +7,7 @@ UPDT_PATH="`dirname \"$0\"`"
 UPDT_PATH="`( cd \"$UPDT_PATH\" && pwd )`"
 cd $UPDT_PATH
 #          14.04  16.04  17.04
-DIST_LIST="trusty" # xenial zesty"
+DIST_LIST="trusty xenial zesty"
 ORG=dreal-deps
 REPO=ibex-lib
 SHA=b47ddf73bfe3e5a18c2b6d77bdddf514b8716b23  # ibex-2.5.1 + four patches 
@@ -72,7 +72,7 @@ if [[ $DOIT == TRUE ]] ; then
         cd ..
 
         echo "=== 3. Upload: ${PKG_NAME}_${VERSION}_source.changes"
-        echo dput -f ppa:${ORG}/${PPA_NAME} ${PKG_NAME}_${VERSION}_source.changes
+        echo dput -f ppa:dreal/dreal ${PKG_NAME}_${VERSION}_source.changes
         # rm -- ${PKG_NAME}_*
         # rm -rf -- ${REPO}/debian debian/changelog
         # rm ${REPO}/bin/bmc
