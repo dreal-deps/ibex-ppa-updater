@@ -2,7 +2,7 @@
 
 # secondly called by launchpad
 build:
-	./waf configure --enable-shared --with-optim --with-affine --interval-lib=filib --prefix=debian/tmp/usr
+	CXXFLAGS=-std=c++0x ./waf configure --enable-shared --with-optim --with-affine --interval-lib=filib --prefix=debian/tmp/usr
 	./waf build
 
 # thirdly called by launchpad
