@@ -72,7 +72,7 @@ if [[ $DOIT == TRUE ]] ; then
         cd ..
 
         echo "=== 3. Upload: ${PKG_NAME}_${VERSION}_source.changes"
-        echo dput -f ppa:dreal/dreal ${PKG_NAME}_${VERSION}_source.changes
+        dput -f ppa:dreal/dreal ${PKG_NAME}_${VERSION}_source.changes
         # rm -- ${PKG_NAME}_*
         # rm -rf -- ${REPO}/debian debian/changelog
         # rm ${REPO}/bin/bmc
