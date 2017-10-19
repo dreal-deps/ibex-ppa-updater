@@ -10,7 +10,7 @@ cd $UPDT_PATH
 DIST_LIST="trusty xenial zesty"
 ORG=dreal-deps
 REPO=ibex-lib
-SHA=ad9c1fe4fbac959542d21fc2180636b2512f3cc7  # ibex-2.5.1 + ten patches
+SHA=5f6731a3d20072d02478c806d05724f5f306f15d  # ibex-2.6.1 + custom patches
 PPA_NAME=dreal
 PKG_NAME=libibex-dev
 URGENCY=medium
