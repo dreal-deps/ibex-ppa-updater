@@ -2,7 +2,7 @@
 
 # secondly called by launchpad
 build:
-	CXXFLAGS=-std=c++0x ./waf configure --enable-shared --with-optim --with-solver --with-affine-extended --interval-lib=filib --lp-lib=clp --prefix=debian/tmp/usr
+	CXXFLAGS=-std=c++0x ./waf configure --enable-shared --with-optim --with-solver --with-affine-extended --interval-lib=filib --lp-lib=clp --prefix=debian/tmp/opt/libibex/2.6.5
 	./waf build
 
 # thirdly called by launchpad
@@ -14,7 +14,7 @@ binary-indep:
 binary-arch:
 	./waf install
 	mkdir debian/tmp/DEBIAN
-	sed 's/^prefix=.*/prefix=\/usr/' -i debian/tmp/usr/share/pkgconfig/ibex.pc  # fix prefix
+	sed 's/^prefix=.*/prefix=\/opt\/libibex\/2.6.5/' -i debian/tmp/opt/libibex/2.6.5/share/pkgconfig/ibex.pc  # fix prefix
 	dpkg-gencontrol -plibibex-dev
 	dpkg --build debian/tmp ..
 

@@ -9,7 +9,7 @@ Uploaded packages are available at https://launchpad.net/~dreal/+archive/ubuntu/
 Required packages
 =================
 
-We assume that you have Ubuntu 14.04 LTS system. You need the
+We assume that you have Ubuntu 16.04 LTS system. You need the
 following packages:
 
 ```bash
@@ -59,19 +59,19 @@ To set up pbuilder, run:
 
 ```bash
 sudo pbuilder --create                \
-              --distribution trusty   \
+              --distribution xenial   \
               --architecture amd64    \
-              --basetgz /var/cache/pbuilder/trusty-amd64-base.tgz  \
+              --basetgz /var/cache/pbuilder/xenial-amd64-base.tgz  \
               --debootstrapopts --keyring=/etc/apt/trusted.gpg
 ```
 
 To create a package, run:
 ```bash
-sudo pbuilder --build
-              --distribution trusty
-              --architecture amd64
-              --basetgz /var/cache/pbuilder/trusty-amd64-base.tgz \
-              libibex-dev_2.5.1.<timedate>.git<gitsha>\~14.04.dsc
+sudo pbuilder --build                \
+              --distribution xenial  \
+              --architecture amd64   \
+              --basetgz /var/cache/pbuilder/xenial-amd64-base.tgz \
+              libibex-dev_2.6.5.<timedate>.git<gitsha>\~16.04.dsc
 ```
 
 You can find the `.deb` file at `/var/cache/pbuilder/result/`.
