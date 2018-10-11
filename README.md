@@ -71,7 +71,7 @@ sudo pbuilder --build                \
               --distribution xenial  \
               --architecture amd64   \
               --basetgz /var/cache/pbuilder/xenial-amd64-base.tgz \
-              libibex-dev_2.6.5.<timedate>.git<gitsha>\~16.04.dsc
+              libibex-dev_2.7.2.<timedate>.git<gitsha>\~16.04.dsc
 ```
 
 You can find the `.deb` file at `/var/cache/pbuilder/result/`.

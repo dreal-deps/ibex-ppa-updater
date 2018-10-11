@@ -6,12 +6,12 @@ set -e  # Abort if any command fails
 UPDT_PATH="`dirname \"$0\"`"
 UPDT_PATH="`( cd \"$UPDT_PATH\" && pwd )`"
 cd $UPDT_PATH
-#          14.04  16.04  17.04 17.10
-# DIST_LIST="trusty xenial zesty artful"
+#          14.04  16.04  17.04 17.10 18.04
+# DIST_LIST="trusty xenial artful bionic"
 DIST_LIST="xenial"
 ORG=dreal-deps
 REPO=ibex-lib
-SHA=d1419538b4d818ed1cf21a01896bc5eaae5d1d57  # ibex-2.6.5 + custom patches
+SHA=ff402eba3a7afc3fd6cac6a12f9c195ef0a3170b  # ibex-2.7.2 + custom patches
 PPA_NAME=dreal
 PKG_NAME=libibex-dev
 URGENCY=medium
@@ -73,9 +73,9 @@ if [[ $DOIT == TRUE ]] ; then
         cd ..
 
         echo "=== 3. Upload: ${PKG_NAME}_${VERSION}_source.changes"
-        # dput -f ppa:dreal/dreal ${PKG_NAME}_${VERSION}_source.changes
-        # rm -- ${PKG_NAME}_*
-        # rm -rf -- ${REPO}/debian debian/changelog
+        #dput -f ppa:dreal/dreal ${PKG_NAME}_${VERSION}_source.changes
+        #rm -- ${PKG_NAME}_*
+        #rm -rf -- ${REPO}/debian debian/changelog
     done
 else
     echo "Nothing to do."
