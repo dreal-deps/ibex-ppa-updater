@@ -2,7 +2,7 @@ Source: libibex-dev
 Section: devel
 Priority: optional
 Maintainer: Soonho Kong <soonho.kong@gmail.com>
-Build-Depends: bison, flex, pkg-config, build-essential, python, coinor-libclp-dev, zlib1g-dev, libbz2-dev
+Build-Depends: bison, flex, pkg-config, build-essential, python2.7, coinor-libclp-dev, zlib1g-dev, libbz2-dev
 Homepage: https://github.com/ibex-team/ibex-lib
 
 Package: libibex-dev

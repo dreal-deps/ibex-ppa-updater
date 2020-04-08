@@ -43,6 +43,8 @@ elif [[ ${DIST} == artful ]] ; then
     DIST_VER=17.10
 elif [[ ${DIST} == bionic ]] ; then
     DIST_VER=18.04
+elif [[ ${DIST} == focal ]] ; then
+    DIST_VER=20.04
 else 
     usage;
     echo "Wrong distro name ${DIST}: we support 'trusty', 'xenial', 'zesty', 'artful', and 'bionic'"
@@ -51,9 +53,9 @@ fi
 
 VERSION_MAJOR=2
 VERSION_MINOR=7
-VERSION_PATCH=2
+VERSION_PATCH=4
 
 cd ${REPO}
 GIT_HASH=`git log --pretty=format:%H -n 1`
 
-echo ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}
+echo ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}.${DATE}.git${GIT_HASH}~${DIST_VER}
